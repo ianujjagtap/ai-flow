@@ -1,0 +1,14 @@
+{
+  "name": "ai-flow",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build && cd server && npm run build",
+    "dev": "npm run dev:server & npm run dev:client"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
