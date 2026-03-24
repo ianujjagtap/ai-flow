@@ -13,5 +13,5 @@ export const saveFlow = async (
 
 export const getAllFlows = async (): Promise<IFlow[]> => {
   // returns the 50 most recent flows, fastest query possible using lean()
-  return Flow.find().sort({ createdAt: -1 }).limit(50).lean() as Promise<IFlow[]>;
+  return Flow.find().sort({ createdAt: -1 }).limit(50).lean().exec() as unknown as Promise<IFlow[]>;
 };
